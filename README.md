@@ -61,11 +61,11 @@ mse = metrics.mean_squared_error(Y_test, Y_pred)
 
 rmse = np.sqrt(mse)
 
-print(f"\nMean Absolute Error: {mae}")
+print("\nMean Absolute Error:",mae)
 
-print(f"Mean Squared Error: {mse}")
+print("Mean Squared Error:",mse)
 
-print(f"Root Mean Squared Error: {rmse}")
+print("Root Mean Squared Error:",rmse)
 
 plt.scatter(X_train, Y_train, color='blue', label='Training Data')
 
@@ -81,26 +81,11 @@ plt.legend()
 
 plt.show()
 
-plt.scatter(X_test, Y_test, color='green', label='Test Data')
-
-plt.plot(X_train, model.predict(X_train), color='red', label='Regression Line')
-
-plt.xlabel("Hours Studied")
-
-plt.ylabel("Scores")
-
-plt.title("Test Data with Regression Line")
-
-plt.legend()
-
-plt.show()
-
 
 ## Output:
 <img src="ex2 output 1.png" alt="Output" width="500"> <br>
-<img src="ex2 output 2.png" alt="Graph 1" width="500"><br>
-<img src="ex2 output 3.png" alt="Graph 2" width="500">
-
+<img src="ex2 output 2.png" alt="Graph" width="500"><br>
+ 
 
 
 
