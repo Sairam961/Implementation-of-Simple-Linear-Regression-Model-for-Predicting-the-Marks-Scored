@@ -97,8 +97,9 @@ plt.show()
 
 
 ## Output:
-<img src="ex2 output 1.png" alt="Output" width="500">
-<img src="ex2 output 2.png" alt="Graph" width="500">
+<img src="ex2 output 1.png" alt="Output" width="500"> <br>
+<img src="ex2 output 2.png" alt="Graph 1" width="500"><br>
+<img src="ex2 output 3.png" alt="Graph 2" width="500">
 
 
 
