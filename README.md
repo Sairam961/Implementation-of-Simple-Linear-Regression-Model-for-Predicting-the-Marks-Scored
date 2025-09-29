@@ -8,17 +8,17 @@ To write a program to predict the marks scored by a student using the simple lin
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1. Import the required libraries and read the dataset.
+2. Separate the independent and dependent variables and split the data into training and testing sets.
+3. Train the linear regression model using the training data and predict the output for the test data.
+4. Plot the regression line along with training and testing data, and calculate evaluation metrics (MAE, MSE, RMSE).
 
 ## Program:
 ```
 /*
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: 
-RegisterNumber:  
+Developed by: R.Sairam
+RegisterNumber:  25000694
 */
 ```
 import pandas as pd
@@ -47,13 +47,21 @@ model.fit(X_train, Y_train)
 
 Y_pred = model.predict(X_test)
 
-print("\nPredicted Values:")
+print("Predicted Values:")
 
 print(Y_pred)
 
-print("\nActual Values:")
+mae = metrics.mean_absolute_error(Y_test, Y_pred)
 
-print(Y_test.values)
+mse = metrics.mean_squared_error(Y_test, Y_pred)
+
+rmse = np.sqrt(mse)
+
+print(f"\nMean Absolute Error: {mae}")
+
+print(f"Mean Squared Error: {mse}")
+
+print(f"Root Mean Squared Error: {rmse}")
 
 plt.scatter(X_train, Y_train, color='blue', label='Training Data')
 
@@ -83,17 +91,6 @@ plt.legend()
 
 plt.show()
 
-mae = metrics.mean_absolute_error(Y_test, Y_pred)
-
-mse = metrics.mean_squared_error(Y_test, Y_pred)
-
-rmse = np.sqrt(mse)
-
-print(f"\nMean Absolute Error: {mae}")
-
-print(f"Mean Squared Error: {mse}")
-
-print(f"Root Mean Squared Error: {rmse}")
 
 ## Output:
 ![simple linear regression model for predicting the marks scored](sam.png)
