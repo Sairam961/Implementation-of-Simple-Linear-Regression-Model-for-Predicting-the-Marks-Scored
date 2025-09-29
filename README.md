@@ -51,6 +51,10 @@ print("Predicted Values:")
 
 print(Y_pred)
 
+print("\nActual Values:")
+
+print(Y_test.values)
+
 mae = metrics.mean_absolute_error(Y_test, Y_pred)
 
 mse = metrics.mean_squared_error(Y_test, Y_pred)
